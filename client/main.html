@@ -1,0 +1,94 @@
+<head>
+  <title>Routing Application</title>
+</head>
+
+<template name="navigation">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Home</a></li>
+		<li><a href="#">Page 1</a> </li>
+		<li><a href="#">Page 2</a> </li>
+		<li><a href="#">{{> loginButtons}}</a> </li>
+      </ul>
+    </div>
+  </nav>
+</template>
+
+<template name="productList">
+  {{> navigation }}
+
+  <div class="container">
+    <h3>View all products</h3>
+
+  </div>
+</template>
+
+<template name="viewProduct">
+  {{> navigation }}
+
+  <div class="container">
+    <h3>View single product</h3>
+
+  </div>
+</template>
+
+<template name="login">
+  {{> navigation }}
+
+  <div class="container">
+    <h3>Please login </h3>
+  </div>
+</template>
+
+<template name="addProduct">
+  {{> navigation }}
+
+  <div class="container">
+    <h3>Please login </h3>
+    <form id="addProductForm" class="col-lg-6">
+      <div class="from-group">
+        <input type="text" name="name" class="form-control" placeholder="name">
+        <input type="text" name="price" class="form-control" placeholder="price">
+        <textarea name="description" class="form-control" placeholder="description"></textarea>
+        <input type="submit" class="btn btn-primary">
+      </div>
+    </form>
+  </div>
+</template>
+
+<template name="editProduct">
+  {{> navigation }}
+
+  <div class="container">
+    <h3>Please login </h3>
+    <form id="editProductForm" class="col-lg-6">
+      <div class="from-group">
+        <input type="text" name="name" class="form-control" placeholder="name">
+        <input type="text" name="price" class="form-control" placeholder="price">
+        <textarea name="description" class="form-control" placeholder="description"></textarea>
+        <input type="submit" class="btn btn-primary">
+      </div>
+    </form>
+  </div>
+</template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
