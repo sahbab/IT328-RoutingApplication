@@ -14,10 +14,11 @@ Meteor.methods({
 		productsCollection.remove({"_id": _id}); 
 },
 	productUpdate: function(updatedProduct){
-		productsCollection.update({"_id": updatedProduct._id}, ("$set": { 
+		
+		productsCollection.update({"_id": updatedProduct._id}, {"$set": { 
 		name: updatedProduct.name, 
 		price: updatedProduct.price,
-	description: updatedProduct.description })); 
+	description: updatedProduct.description }}); 
 },
 	addDummyData: function(){
 		productsCollection.remove({}); 

@@ -35,7 +35,7 @@ Template.editProduct.events({
     'submit #editProductForm': function(event){
         event.preventDefault();
         var product = this;
-        
+        console.log(product.name);
         //get updated values from our form
         product.name = $('input[name="name"]').val();
         product.price = $('input[name="price"]').val();
