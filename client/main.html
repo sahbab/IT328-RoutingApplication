@@ -10,7 +10,7 @@
       </div>
       <ul class="nav navbar-nav">
         <li class="active"><a href="/">Home</a></li>
-		<li><a href="#">Page 1</a> </li>
+		<li><a href="/addProduct">Add a Product</a> </li>
 		<li><a href="#">Page 2</a> </li>
 		<li><a href="#">{{> loginButtons}}</a> </li>
       </ul>
@@ -23,6 +23,11 @@
 
   <div class="container">
     <h3>View all products</h3>
+	<ul class="list-group">
+	  {{#each products}}
+	  <li class="list-group-item"> <a href="/viewProduct/{{_id}}">{{name}}</a> </li>
+	  {{/each}}
+	</ul>
 
   </div>
 </template>
@@ -32,7 +37,14 @@
 
   <div class="container">
     <h3>View single product</h3>
-
+	<ul>
+	<li>Name: {{name}}</li>
+	<li>Price: ${{price}}</li>
+	<li>Description: {{description}}</li>
+	</ul>
+	
+	<a href="/editProduct/{{_id}}">Edit</a>
+	<a href="/deleteProduct/{{_id}}">Delete</a>
   </div>
 </template>
 
@@ -48,7 +60,7 @@
   {{> navigation }}
 
   <div class="container">
-    <h3>Please login </h3>
+    <h3>Add Product </h3>
     <form id="addProductForm" class="col-lg-6">
       <div class="from-group">
         <input type="text" name="name" class="form-control" placeholder="name">
@@ -64,7 +76,7 @@
   {{> navigation }}
 
   <div class="container">
-    <h3>Please login </h3>
+    <h3>Edit Product </h3>
     <form id="editProductForm" class="col-lg-6">
       <div class="from-group">
         <input type="text" name="name" class="form-control" placeholder="name">
